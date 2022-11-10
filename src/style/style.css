@@ -1,0 +1,15 @@
+@import "@fonts/fonts.css";
+
+:root {
+    --box-shadow-grey: 0 5px 10px 1px grey;
+
+    --bg-color-orange: #ff5722;
+
+    --color-orange: #ff5722;
+
+    --padding-top: 105px;
+}
+
+body {
+    font-family: Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
