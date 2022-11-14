@@ -1,0 +1,13 @@
+.nav__back {
+    cursor: pointer;
+    font-size: calc(14.94118px + .08824vw);
+}
+
+.nav__back img {
+    width: 10px;
+    height: 15px;
+}
+
+.title {
+    font-size: calc(21.94118px + .65294vw);
+}
