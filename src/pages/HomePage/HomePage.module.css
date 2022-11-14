@@ -1,7 +1,5 @@
 .container {
     background: var(--bg-color-orange);
-
-    padding-top: var(--padding-top);
 }
 
 .logo {

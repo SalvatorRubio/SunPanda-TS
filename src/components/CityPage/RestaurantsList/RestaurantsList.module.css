@@ -1,0 +1,43 @@
+.title {
+    font-size: 3.3vmax;
+    font-weight: 550;
+}
+
+.restaurants__item {
+    width: 250px;
+    transition: all .5s ease 0s;
+    cursor: pointer;
+}
+
+.restaurants__item p {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.restaurants__item:hover {
+    transform: translateY(-5%);
+    box-shadow: 0 5px 10px 0 var(--bg-color-orange);
+}
+
+.restaurants__itemNew {
+    border: 3px solid gray;
+    height: 198px;
+    width: 250px;
+}
+
+.restaurants__itemNew h1 {
+    font-size: 25px;
+    font-weight: 900;
+    color: grey;
+}
+
+@media screen and (max-width: 520px){
+    .restaurants__item {
+        width: 100%;
+    }
+
+    .restaurants__itemNew {
+        width: 100%;
+    }
+}
+

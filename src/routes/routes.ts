@@ -1,6 +1,7 @@
+import React from "react";
 import HomePage from "@pages/HomePage";
 import CityPage from "@pages/CityPage";
-import React from "react";
+import RestaurantPage from "@pages/RestaurantPage";
 
 type Routes = {
   path: string;
@@ -15,6 +16,10 @@ const routes: Routes[] = [
   {
     path: "/:city",
     component: CityPage,
+  },
+  {
+    path: "/:city/shop-:restaurant",
+    component: RestaurantPage,
   },
 ];
 

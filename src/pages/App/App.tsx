@@ -12,17 +12,19 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
-      <Routes>
-        {routes.map((route: IRoutes) => {
-          return (
-            <Route
-              key={route.path}
-              path={route.path}
-              element={<route.component />}
-            />
-          );
-        })}
-      </Routes>
+      <div style={{ paddingTop: 105 }}>
+        <Routes>
+          {routes.map((route: IRoutes) => {
+            return (
+              <Route
+                key={route.path}
+                path={route.path}
+                element={<route.component />}
+              />
+            );
+          })}
+        </Routes>
+      </div>
     </>
   );
 };
