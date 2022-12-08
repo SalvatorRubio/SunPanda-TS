@@ -1,6 +1,8 @@
 import React from "react";
-import { RestaurantsInfo } from "@pages/CityPage/CityPage";
 import { NavLink } from "react-router-dom";
+import { RestaurantsInfo } from "@pages/CityPage/CityPage";
+import { useAppDispatch } from "@hooks/useReduxMethods";
+import { setShopName } from "@store/slices/restaurantSlice";
 
 import cn from "classnames";
 
@@ -15,6 +17,10 @@ export const RestaurantsList: React.FC<TypeRestaurantsList> = ({
   restaurants,
   refRestaurants,
 }) => {
+  const dispatch = useAppDispatch();
+  const handleClick = (name: string) => {
+    dispatch(setShopName(name));
+  };
   return (
     <div className="my-5 px-3" ref={refRestaurants}>
       <h1 className={cn("pb-3", styles.title)}>Рестораны</h1>
@@ -24,7 +30,7 @@ export const RestaurantsList: React.FC<TypeRestaurantsList> = ({
             <NavLink
               key={name}
               to={`shop-${name}`}
-              // onClick={() => handleClick(price, timeStart, timeEnd, name)}
+              onClick={() => handleClick(name)}
               className={cn(
                 "text-decoration-none my-1 m-sm-2 rounded-3",
                 styles.restaurants__item

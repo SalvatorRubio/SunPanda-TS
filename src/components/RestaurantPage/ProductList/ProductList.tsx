@@ -5,6 +5,9 @@ import {
 } from "@pages/RestaurantPage/RestaurantPage";
 import cn from "classnames";
 import styles from "./ProductList.module.css";
+import { useAppDispatch } from "@hooks/useReduxMethods";
+import { addProduct } from "@store/slices/restaurantSlice";
+import ModalAddProduct from "@UI/ModalAddProduct";
 
 type Props = {
   restaurantRange: TypeRestaurantRange[];
@@ -18,6 +21,24 @@ type TypeMenuList = {
 
 const ProductList: React.FC<Props> = ({ restaurantRange, category }) => {
   const [menuList, setMenuList] = useState<TypeMenuList[]>([]);
+  const [show, setShow] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+
+  const handleClick = (name: string, price: number, img: string) => {
+    setShow(true);
+    setTimeout(() => {
+      setShow(false);
+    }, 2000);
+    const product = {
+      name,
+      price,
+      img,
+      oneProductPrice: price,
+      lengthProducts: 1,
+    };
+    dispatch(addProduct(product));
+  };
+
   useEffect(() => {
     if (restaurantRange.find((item) => item.name === category)) {
       // eslint-disable-next-line array-callback-return
@@ -42,9 +63,8 @@ const ProductList: React.FC<Props> = ({ restaurantRange, category }) => {
                 return (
                   <div
                     key={name}
-                    // onClick={() => handleClick(name, price, img)}
                     className={cn(
-                      "bg-white rounded-4 me-3 d-flex flex-column justify-content-between align-content-between position-relative",
+                      "bg-white rounded-4 me-md-3 me-2 my-md-0 my-2 d-flex flex-column justify-content-between align-content-between position-relative",
                       styles.product__item
                     )}
                   >
@@ -77,6 +97,7 @@ const ProductList: React.FC<Props> = ({ restaurantRange, category }) => {
                       {name}
                     </p>
                     <button
+                      onClick={() => handleClick(name, price, img)}
                       className={cn(
                         "m-2 p-1 rounded border-0 text-white",
                         styles.product__button
@@ -91,7 +112,7 @@ const ProductList: React.FC<Props> = ({ restaurantRange, category }) => {
           </div>
         );
       })}
-      {/*<ModalAddProduct show={show}/>*/}
+      <ModalAddProduct show={show} setShow={setShow} />
     </>
   );
 };

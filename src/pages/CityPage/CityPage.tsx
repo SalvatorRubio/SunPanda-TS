@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
-import styles from "./CityPage.module.css";
-import cn from "classnames";
-import { getApiResource } from "@utils/network";
-import { API_CITY_RESTAURANTS } from "@constants/api";
 import SliderDiscount from "@components/CityPage/SliderDiscounts";
 import Steps from "@components/CityPage/Steps";
 import RestaurantsList from "@components/CityPage/RestaurantsList";
+
+import { getApiResource } from "@utils/network";
+import { API_CITY_RESTAURANTS } from "@constants/api";
+
+import cn from "classnames";
+import styles from "./CityPage.module.css";
 
 type CityInfo = {
   discounts: string[];

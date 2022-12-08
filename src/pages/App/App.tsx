@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import routes from "@routes/routes";
 import { Route, Routes } from "react-router";
 import Header from "@components/Header";
+import Footer from "@components/Footer";
+import OffCanvasCart from "@UI/OffCanvasCart";
 
 interface IRoutes {
   path: string;
@@ -9,10 +11,15 @@ interface IRoutes {
 }
 
 const App: React.FC = () => {
+  const [show, setShow] = useState<boolean>(false);
+
+  const handleClose = () => setShow(false);
+  const toggleShow = () => setShow((show) => !show);
   return (
     <>
-      <Header />
-      <div style={{ paddingTop: 105 }}>
+      <Header toggleShow={toggleShow} />
+
+      <div style={{ minHeight: "100vh" }}>
         <Routes>
           {routes.map((route: IRoutes) => {
             return (
@@ -25,6 +32,8 @@ const App: React.FC = () => {
           })}
         </Routes>
       </div>
+      <Footer />
+      <OffCanvasCart show={show} handleClose={handleClose} />
     </>
   );
 };

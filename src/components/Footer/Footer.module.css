@@ -1,0 +1,43 @@
+.footer {
+  min-height: 292px;
+  background-color: #322f2f;
+}
+
+.container {
+  padding: 30px 15px;
+  max-width: 1620px;
+}
+
+.footer__itemBanner {
+  width: 350px;
+  padding-bottom: 20px;
+}
+
+.footer__item ul li {
+  text-decoration: none;
+  list-style-type: none;
+  padding-bottom: 15px;
+}
+
+.footer__itemLink:hover {
+  color: var(--color-orange) !important;
+}
+
+.footer__itemTitle {
+  font-size: 20px;
+  font-weight: 600;
+
+  margin: 30px 0;
+}
+
+.footer__itemIcon {
+  width: 50px;
+  height: 50px;
+  margin-right: 17px;
+}
+
+.mobile__banner {
+  width: 135px;
+  height: 43px;
+  margin-bottom: 10px;
+}

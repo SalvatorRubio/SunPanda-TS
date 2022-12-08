@@ -1,57 +1,63 @@
 .container {
-    background: var(--bg-color-orange);
+  background: var(--bg-color-orange);
+  padding-top: 105px;
 }
 
 .logo {
-    width: 33.3333%;
-    font-size: calc(21px + .00549vmax);
+  width: 33.3333%;
+  font-size: calc(21px + 0.00549vmax);
 }
 
 .logo p {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .cElement {
-    background-image: url("./img/logo.png");
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 14.4vmax;
-    width: 100%;
-    align-self: center;
+  background-image: url("./img/logo.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 14.4vmax;
+  width: 100%;
+  align-self: center;
 }
 
 .rElement {
-    background-image: url("./img/r-element.png");
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: top;
-    background-size: contain;
-    width: 33.3333%;
+  background-image: url("./img/r-element.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: top;
+  background-size: contain;
+  width: 33.3333%;
 }
 
 .lElement {
-    background-image: url("./img/l-element.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 33.3333%;
+  background-image: url("./img/l-element.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 33.3333%;
 }
 
+@media screen and (max-width: 992px) {
+  .container {
+    padding-top: 55px;
+  }
+}
 
 @media screen and (max-width: 760px) {
-    .logo p {
-        font-size: calc(16px + .00549vmax);
-    }
+  .logo p {
+    font-size: calc(16px + 0.00549vmax);
+  }
 }
 
 @media screen and (max-width: 599px) {
-    .logo p {
-        font-size: calc(13px + .00549vmax);
-    }
+  .logo p {
+    font-size: calc(13px + 0.00549vmax);
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .logo p {
-        font-size: calc(11px + .00549vmax);
-    }
+  .logo p {
+    font-size: calc(11px + 0.00549vmax);
+  }
 }

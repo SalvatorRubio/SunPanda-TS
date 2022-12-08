@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAppDispatch } from "@hooks/useReduxMethods";
+import { setCityEngName, setCityName } from "@store/slices/restaurantSlice";
+
 import cn from "classnames";
 
 import styles from "./CitiesList.module.css";
@@ -13,25 +16,31 @@ const CitiesList: React.FC = () => {
   const cities: Cities[] = [
     {
       name: "Ахтубинск",
-      href: "/Ahtubinsk",
+      href: "Ahtubinsk",
     },
     {
       name: "Новошахтинск",
-      href: "/Novoshahtinsk",
+      href: "Novoshahtinsk",
     },
     {
       name: "Крымск",
-      href: "/Krymsk",
+      href: "Krymsk",
     },
     {
       name: "Каменск-Шахтинский",
-      href: "/KamenskShahtinsk",
+      href: "KamenskShahtinsk",
     },
     {
       name: "Сарапул",
-      href: "/Sarapul",
+      href: "Sarapul",
     },
   ];
+
+  const dispatch = useAppDispatch();
+  const handleClick = (name: string, href: string) => {
+    dispatch(setCityName(name));
+    dispatch(setCityEngName(href));
+  };
   return (
     <section className="w-100 py-3">
       <h1 className={cn("text-center text-uppercase", styles.title)}>
@@ -42,11 +51,12 @@ const CitiesList: React.FC = () => {
           return (
             <Link
               key={item.name}
+              onClick={() => handleClick(item.name, item.href)}
               className={cn(
                 "py-1 px-3 text-white text-decoration-none rounded-1 mx-5 my-4",
                 styles.cities__name
               )}
-              to={item.href}
+              to={`/City-${item.href}`}
             >
               {item.name}
             </Link>

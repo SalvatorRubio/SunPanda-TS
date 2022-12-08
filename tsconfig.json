@@ -35,6 +35,14 @@
       ],
       "@utils/*": [
         "utils/*"
+      ],
+      "@store/*": [
+        "store/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],"@UI/*": [
+        "components/UI/*"
       ]
     },
     "include": [

@@ -2,6 +2,7 @@ import React from "react";
 import HomePage from "@pages/HomePage";
 import CityPage from "@pages/CityPage";
 import RestaurantPage from "@pages/RestaurantPage";
+import Order from "@pages/Order";
 
 type Routes = {
   path: string;
@@ -14,13 +15,14 @@ const routes: Routes[] = [
     component: HomePage,
   },
   {
-    path: "/:city",
+    path: "/City-:city",
     component: CityPage,
   },
   {
-    path: "/:city/shop-:restaurant",
+    path: "/City-:city/shop-:restaurant",
     component: RestaurantPage,
   },
+  { path: "/City-:city/order", component: Order },
 ];
 
 export default routes;

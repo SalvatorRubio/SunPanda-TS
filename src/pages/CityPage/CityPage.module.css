@@ -1,118 +1,111 @@
 .banner {
-    background-image: url("./img/banner.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-image: url("./img/banner.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .banner__title {
-    height: 370px;
-    padding-left: 150px;
+  height: 400px;
+  padding-left: 150px;
 }
 
 .banner__title h1 {
-    font-size: 2.3vmax;
-    font-weight: 800;
-    line-height: 2.9vw;
-    max-width: 780px;
-    margin-bottom: 40px;
+  font-size: 2.3vmax;
+  font-weight: 800;
+  line-height: 2.9vw;
+  max-width: 780px;
+  margin-bottom: 40px;
 }
 
 .banner__title button {
-    background: var(--bg-color-orange);
-    font-size: 1.3vmax;
-    font-weight: 700;
-    padding: 10px 24px;
-    max-width: 275px;
-    width: 100%;
-    transition: .4s;
+  background: var(--bg-color-orange);
+  font-size: 1.3vmax;
+  font-weight: 700;
+  padding: 10px 24px;
+  max-width: 275px;
+  width: 100%;
+  transition: 0.4s;
 }
 
 .banner__title button:hover {
-    box-shadow: 0 10px 20px #0003, 0 2px 2px #00000024, 0 3px 1px -2px #0000001f;
+  box-shadow: 0 10px 20px #0003, 0 2px 2px #00000024, 0 3px 1px -2px #0000001f;
 }
 
 @media screen and (max-width: 1200px) {
-    .banner__title {
-        height: 250px;
-    }
+  .banner__title {
+    height: 250px;
+  }
 }
 
 @media screen and (max-width: 900px) {
+  .banner {
+    /*background-image: url("./img/banner-phone.jpg");*/
+    /*max-width: 558px;*/
+    width: 100%;
+    background-repeat: no-repeat;
+  }
 
-    .banner {
-        /*background-image: url("./img/banner-phone.jpg");*/
-        /*max-width: 558px;*/
-        width: 100%;
-        background-repeat: no-repeat;
-    }
+  .banner__title {
+    height: 190px;
+    padding-top: 30px;
+    padding-left: 100px;
+  }
 
-    .banner__title {
-        height: 190px;
-        padding-top: 30px;
-        padding-left: 100px;
-    }
+  .banner__title h1 {
+    margin-bottom: 20px;
+  }
 
-    .banner__title h1 {
-        margin-bottom: 20px;
-    }
-
-    .banner__title button {
-        padding: 5px 15px;
-        width: 225px;
-    }
+  .banner__title button {
+    padding: 5px 15px;
+    width: 225px;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .banner__title {
+    padding-top: 30px;
+    height: 130px;
+    padding-left: 0;
+  }
 
-    .banner__title {
-        padding-top: 30px;
-        height: 130px;
-        padding-left: 0;
-    }
+  .banner__title h1 {
+    margin-bottom: 0;
+    font-size: 2vmax;
+  }
 
-    .banner__title h1 {
-        margin-bottom: 0;
-        font-size: 2vmax;
-    }
-
-    .banner__title button {
-        padding: 5px 15px;
-        width: 225px;
-    }
+  .banner__title button {
+    padding: 5px 15px;
+    width: 225px;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  .banner {
+    /*background-image: url("./img/banner-phone.jpg");*/
+    /*max-width: 558px;*/
+    /*width: 100%;*/
+    background-repeat: no-repeat;
+  }
 
-    .banner {
-        /*background-image: url("./img/banner-phone.jpg");*/
-        /*max-width: 558px;*/
-        /*width: 100%;*/
-        background-repeat: no-repeat;
-    }
-
-    .banner__title {
-        height: 100px;
-
-    }
-
+  .banner__title {
+    height: 100px;
+  }
 }
 
 @media screen and (max-width: 400px) {
+  .banner {
+    background-image: url("./img/banner-phone.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-    .banner {
-        background-image: url("./img/banner-phone.jpg");
-        background-size: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+  .banner__title {
+    height: 100px;
+  }
 
-    .banner__title {
-        height: 100px;
-    }
-
-    .banner__title h1 {
-        padding-bottom: 10px;
-        line-height: 13px;
-    }
-
+  .banner__title h1 {
+    padding-bottom: 10px;
+    line-height: 13px;
+  }
 }
